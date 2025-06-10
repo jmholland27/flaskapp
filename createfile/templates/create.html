@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}View Users{% endblock%}
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages%}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+<form action="#" method="post">
+    <p>Filename:</p>
+    <p><input type="text" name="filename"></p>
+    <p>Submit:</p>
+    <p><input type="submit" value="submit"></p>
+</form>
+
+
+{% endblock%}
